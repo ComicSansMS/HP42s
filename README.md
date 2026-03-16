@@ -40,6 +40,7 @@ All functions may overwrite or clear the registers `F1`, `F2`, ... `Fn` to store
 |------|-------------|-----------------|------------------|-----------------|--------|
 | `/EXPAND` | Expands the fraction $\frac{Y}{X}$ by the factor provided as input | `X`, `Y` | `X`, `Y` | `T` only | Expansion factor |
 | `/REDUCE` | Reduce/simplify the fraction $\frac{Y}{X}$ | `X`, `Y` | `X`, `Y` | ❌ | $\gcd(Y, X)$ |
-| `/ADD` | Add two fractions provided as input and save the result as $\frac{Y}{X}$ | - | `X`, `Y` | ❌ | Overwritten |
+| `/ADD` | Add two fractions provided as input (defaults to $\frac{T}{Z}$ and $\frac{Y}{X}$) and save the result as $\frac{Y}{X}$ | `X`..`T` | `X`, `Y` | ❌ | Overwritten |
 | `←Ab/c` | Convert the mixed fraction $Z\frac{Y}{X}$ to a proper fraction stored as $\frac{Y}{Z}$ | `X`, `Y`, `Z` | `X`, `Y` | `T` only | Overwritten |
 | `→Ab/c` | Convert the fraction $\frac{Y}{X}$ to a mixed fraction stored as $Z\frac{Y}{X}$ | `X`, `Y` | `X`, `Y`, `Z` | ✅ | Overwritten |
+| `→a/b` | Convert the decimal number in `X` to a fraction stored as $\frac{Y}{X}$ | `X` | `X`, `Y` | ❌ | Overwritten |
